@@ -10,7 +10,7 @@
 <body>
     <header>
         <h1>motus</h1>
-        <button>reset</button>
+        <button onclick="reset()">reset</button>
     </header>
     <main>
         <table>
@@ -59,8 +59,8 @@
                 </tr>
             </tbody>
         </table>
-        <form action="">
-            <input type="text" placeholder="Écrivez ici un mot de 5 lettres." required>
+        <form id="motusForm" action="">
+            <input id = "motusInput" type="text" placeholder="Écrivez ici un mot de 5 lettres." required>
             <button type="submit">Envoyer</button>
         </form>
     </main>
