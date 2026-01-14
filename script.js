@@ -14,6 +14,7 @@ function getRandomInt(max) {
 }
 
 const answer = words[getRandomInt(21)];
+console.log(answer);
 
 //Fonctionnalités du motus
 
@@ -25,6 +26,7 @@ button.addEventListener('click', () => {
     }
     word = lettersFormat(word);
     console.log(word);
+    answerVerif(word, answer, tries);
 }
 )
 
@@ -38,11 +40,16 @@ function wordSize(word){
     }
 }
 
-function answerVerif(tab, answer){
+function answerVerif(tab, answer, essais){
     /*Fonction qui vérifie si le mot rentré est bon, ou quelles lettres sont bonnes et qui gère l'affichage couleur*/
     answerArray = lettersFormat(answer);
+    let cellule;
     for(let i = 0; i < 5; i++){
-        if(answerArray[i] == )
+        if(answerArray[i] == tab[i]){
+            console.log(i)
+            cellule = document.getElementById("row" + (essais-5) + "cell" + (i + 1));
+            cellule.classList.add("green");
+        }
     }
 }
 
