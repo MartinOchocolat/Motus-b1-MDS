@@ -6,14 +6,14 @@ let tries = 6;
 
 let grille = [];
 
-let button = document.getElementById("motusSubmit");
-let input = document.getElementById("motusInput");
+const button = document.getElementById("motusSubmit");
+const input = document.getElementById("motusInput");
 
 function getRandomInt(max) {
   return Math.floor(Math.random() * max);
 }
 
-let answer = words[getRandomInt(21)];
+const answer = words[getRandomInt(21)];
 
 //Fonctionnalités du motus
 
@@ -38,9 +38,12 @@ function wordSize(word){
     }
 }
 
-function answerVerif(tab){
-    /*Fonction qui vérifie si le mot rentré est bon, et quelles lettres sont bonnes*/
-    
+function answerVerif(tab, answer){
+    /*Fonction qui vérifie si le mot rentré est bon, ou quelles lettres sont bonnes et qui gère l'affichage couleur*/
+    answerArray = lettersFormat(answer);
+    for(let i = 0; i < 5; i++){
+        if(answerArray[i] == )
+    }
 }
 
 let lettersFormat = (word) => {
@@ -62,17 +65,3 @@ function reset(){
     /* Fonction pour reset entièrement le jeu */
     location.reload();
 }
-
-function motusTry(){
-    /* Fonction qui gère les essais */
-
-}
-
-
-//Affichage
-
-function color(){
-    /*Fonction qui va gérer l'affichage graphique en changeant les couleurs des cases*/
-
-}
-
