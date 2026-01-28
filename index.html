@@ -13,6 +13,14 @@
         <button onclick="reset()">reset</button>
     </header>
     <main>
+        <div id="victory" class="hidden">
+            <h1>Bien joué ! Tu as gagné !</h1>
+            <button class="replay" onclick="reset()">Rejouer ?</button>
+        </div>
+        <div id="defeat" class="hidden">
+            <h2 id ="defeatText"></h2>
+            <button class="replay" onclick="reset()">Rejouer ?</button>
+        </div>
         <table>
             <tbody>
                 <tr id="row1">
@@ -60,16 +68,18 @@
             </tbody>
         </table>
         
-        <input id = "motusInput" type="text" placeholder="Écrivez ici un mot de 5 lettres." maxlength="5">
-        <button id = "motusSubmit" type="submit">Envoyer</button>
+        <div id="side">
+            <p id="triesNumber">Essais restants : 6</p>
+            <button id = "motusSubmit" type="submit">Envoyer</button>
+        </div>
 
     </main>
     <footer>
         <p>Martin Industries tous droits réservés</p>
         <div id="social">
-            <a href="https://twitter.com/Mart_Pkmn"><i class="fa-brands fa-twitter"></i></a>
-            <a href="https://www.instagram.com/mart_pkmn/"><i class="fa-brands fa-instagram"></i></a>
-            <a href="https://www.linkedin.com/in/martin-poutrain-410717356/"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://twitter.com/Mart_Pkmn" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+            <a href="https://www.instagram.com/mart_pkmn/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/martin-poutrain-410717356/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
         </div>
     </footer>
     <script src="script.js"></script>
